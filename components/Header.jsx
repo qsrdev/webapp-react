@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 
+//Utilizziamo NavLink in questo caso perché gestisce la classe active automaticamente
 const Header = () => {
   const headerLinks = [
     {

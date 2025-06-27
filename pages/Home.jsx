@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <main>
         <section>
-          <h1>questa è la mia home</h1>
+          <h1>Questa è la mia home</h1>
         </section>
       </main>
     </>
