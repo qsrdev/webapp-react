@@ -1,10 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useFetcher } from "react-router-dom";
 
 const Home = () => {
-  useEffect();
-
   return (
     <>
       <main>
