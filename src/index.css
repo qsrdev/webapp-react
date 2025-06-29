@@ -2,8 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Netflix Sans";
 }
 
-.card-image{
+/* Import del font di netflix */
+@font-face {
+  font-family: "Netflix Sans";
+  font-weight: 100;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format("woff2"),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format("woff");
+}
+
+.card-image {
   object-fit: cover;
+}
+
+/* /////////////////// */
+
+.bg {
+  background-color: "#141414";
 }

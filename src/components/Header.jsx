@@ -16,10 +16,10 @@ const Header = () => {
   return (
     <>
       <header>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <nav className="navbar navbar-expand-lg bg-black">
           <div className="container-fluid">
             <NavLink className="navbar-brand" to={headerLinks[0].url}>
-              Movies
+              <img src="/logo.png" alt="" style={{ width: "80px", height: "30px" }} />
             </NavLink>
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@ const Header = () => {
               <ul className="navbar-nav">
                 {headerLinks.map((curLink, index) => (
                   <li key={index} className="nav-item">
-                    <NavLink className="nav-link" aria-current="page" to={curLink.url}>
+                    <NavLink className="nav-link text-light" aria-current="page" to={curLink.url}>
                       {curLink.title}
                     </NavLink>
                   </li>

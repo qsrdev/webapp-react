@@ -16,10 +16,10 @@ const MovieList = () => {
   return (
     <>
       <main>
-        <section>
+        <section style={{ backgroundColor: "#141414", color: "white" }}>
           <div className="container py-5">
-            <h1 className="text-center mb-4">I tuoi Film</h1>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+            <h1 className="text-center mb-4">Your Library</h1>
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
               {movies.map((curMovie) => (
                 <div className="col" key={curMovie.id}>
                   <Card key={curMovie.id} movie={curMovie} />

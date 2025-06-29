@@ -1,13 +1,23 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import UserLayout from "../layout/UserLayout";
-import Home from "../pages/Home";
-import MovieList from "../pages/MovieList";
-import Singlemovie from "../pages/SingleMovie";
+import MovieList from "./pages/MovieList";
+import Singlemovie from "./pages/SingleMovie";
+import UserLayout from "./layout/UserLayout";
+import MovieContext from "./context/Context";
+import Home from "./pages/Home";
 
-function App() {
+export default function App() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    axios.get(`http://localhost:3000/movies`).then((resp) => {
+      setMovies(resp.data.data);
+    });
+  }, []);
+
   return (
-    <>
+    <MovieContext.Provider value={movies}>
       <BrowserRouter>
         <Routes>
           <Route element={<UserLayout />}>
@@ -17,8 +27,6 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </MovieContext.Provider>
   );
 }
-
-export default App;
