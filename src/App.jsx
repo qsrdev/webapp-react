@@ -13,6 +13,7 @@ export default function App() {
   useEffect(() => {
     axios.get(`http://localhost:3000/movies`).then((resp) => {
       setMovies(resp.data.data);
+      console.log(resp.data.data);
     });
   }, []);
 
@@ -23,7 +24,7 @@ export default function App() {
           <Route element={<UserLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<MovieList />} />
-            <Route path="/movies/:id" element={<Singlemovie />} />
+            <Route path="/movies/:slug" element={<Singlemovie />} />
           </Route>
         </Routes>
       </BrowserRouter>

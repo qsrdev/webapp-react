@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const SingleMovie = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [infoMovie, setInfoMovie] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/movies/${id}`).then((resp) => {
+    axios.get(`http://localhost:3000/movies/${slug}`).then((resp) => {
       setInfoMovie(resp.data.data);
       console.log(infoMovie);
     });

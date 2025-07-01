@@ -1,17 +1,11 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
+import MovieContext from "../context/Context";
 
 const MovieList = () => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    axios.get(`http://localhost:3000/movies`).then((resp) => {
-      setMovies(resp.data.data);
-      console.log(movies);
-    });
-  }, []);
+  const movies = useContext(MovieContext);
 
   return (
     <>

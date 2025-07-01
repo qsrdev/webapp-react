@@ -46,7 +46,7 @@ const Home = () => {
               <h2 className="mb-3">See available titles</h2>
               <div className="d-flex overflow-auto row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
                 {movies.map((curMovie) => (
-                  <HomeCard movie={curMovie} />
+                  <HomeCard key={curMovie.id} movie={curMovie} />
                 ))}
               </div>
             </div>
