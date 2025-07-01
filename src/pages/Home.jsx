@@ -34,7 +34,7 @@ const Home = () => {
                 <div>
                   <h1>Inception</h1>
                   <p>A skilled thief is given a chance at redemption if he can successfully perform inception.</p>
-                  <Link to={`/movies/1`} className="btn btn-danger me-2">
+                  <Link to={`/movies/inception`} className="btn btn-danger me-2">
                     Watch now!
                   </Link>
                   <button className="btn btn-secondary disabled">Add to list</button>
