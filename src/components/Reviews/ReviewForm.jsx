@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-export default function ReviewForm({ movie_id }) {
+export default function ReviewForm({ movie_id, reloadReviews }) {
   const emptyReview = {
     name: "",
     vote: 1,
