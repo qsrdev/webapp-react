@@ -19,13 +19,11 @@ export default function ReviewForm({ movie_id, reloadReviews }) {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // fare la chiamata al API
+
     axios.post(`http://localhost:3000/movies/${movie_id}/reviews`, formData).then((resp) => {
       console.log(resp);
-      // Quando arriva la risposta
-      //    resetto il form
       setFormData(emptyReview);
-      //    ricarico i dati della pagina per mostrare i dati aggiornati
+
       reloadReviews();
     });
   };
